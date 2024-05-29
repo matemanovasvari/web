@@ -1,0 +1,56 @@
+div.kepek{
+    width: 20vw;
+    height: 20vh;
+    float: left;
+    margin: 0 10px;
+}
+
+div.kepek>img{
+    width: 100%;
+}
+
+h2 + p{
+    text-align: center;
+}
+
+h2 ~ ul{
+    background-color: beige;
+    width: 20vw;
+}
+
+/*_blank attribútumú elem formázása*/
+[target = "_blank"]{
+    color: green;
+    background-color: yellow;
+    text-decoration: none;
+}
+
+/*a ho szót tartalmazza a title toldalék nélkül*/
+/* [title ~= "ho"]{
+    border: 2px solid red;
+    border-radius: 25px;
+} */
+
+/*a ho szóval kezdődik + kötőjel*/
+/* [title|="ho"]{
+    border: 2px solid red;
+    border-radius: 25px;
+} */
+
+/*a title a ho szót tartalmazza*/
+/* [title^="ho"]{
+    border: 2px solid red;
+    border-radius: 25px;
+} */
+
+/*a title a ho szóra végződik*/
+/* [title$="ho"]{
+    border: 2px solid red;
+    border-radius: 25px;
+} */
+
+/*a title tartalmazza a virag szót*/
+[title*="virag"]{
+    border: 2px solid red;
+    border-radius: 25px;
+}

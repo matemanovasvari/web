@@ -1,0 +1,66 @@
+<table>
+        <tr>
+            <th>Teljesítménytúra neve</th>
+            <th>Táv</th>
+            <th>Szintkülönbség</th>
+            <th>Hónap</th>
+            <th>Nehézségi pontszám1</th>
+            <th>Megjegyzés</th>
+        </tr>
+        <tr>
+            <td>Kinizsi Százas</td>
+            <td>100 km</td>
+            <td>2775 m</td>
+            <td>május</td>
+            <td>128</td>
+            <td>Magyarország első teljesítménytúrája</td>
+        </tr>
+        <tr>
+            <td>Iszinik 100</td>
+            <td>100 km</td>
+            <td>3027 m</td>
+            <td>november</td>
+            <td>148</td>
+            <td>a Kinizsi Százas "visszafelé"</td>
+        </tr>
+        <tr>
+            <td>BEAC Maxi</td>
+            <td>110 km</td>
+            <td>4200 m</td>
+            <td>szeptember</td>
+            <td>152</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Rockenbauer 130</td>
+            <td>130 km</td>
+            <td>2640 m</td>
+            <td>augusztus</td>
+            <td>180</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Sámson 120</td>
+            <td>118 km</td>
+            <td>5801 m</td>
+            <td>július</td>
+            <td>201</td>
+            <td>egyszer, 2005-ben került megrendezésre</td>
+        </tr>
+        <tr>
+            <td>Mátra 115</td>
+            <td>124 km</td>
+            <td>6374 m</td>
+            <td>június</td>
+            <td>222</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Kazinczy 200</td>
+            <td>202 km</td>
+            <td>5500 m</td>
+            <td>július</td>
+            <td>296</td>
+            <td>-</td>
+        </tr>
+    </table>

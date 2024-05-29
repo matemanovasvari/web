@@ -1,0 +1,118 @@
+body{
+    display: flex;
+    color: rgb(2, 55, 2);
+    background-color: rgb(235, 248, 235);
+    flex: 1;
+    flex-direction: column;
+}
+
+.d1, .d2, .d3, .d4, .k2-b, .k4-b{
+    background-color: rgb(2, 55, 2);
+    color: rgb(235, 248, 235);
+    margin: 5px;
+    padding: 5px;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h3{
+    font-variant: small-caps;
+}
+
+.sor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.d1, .d2, .d3, .d4{
+    line-height: 1.5;
+}
+
+.k2{
+    display: flex;
+    flex-direction: column;
+}
+
+.k3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.k3-b{
+    color: rgb(2, 55, 2);
+    border: 2px solid rgb(2, 55, 2);
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+}
+
+.k3-b>img{
+    width: 150px;
+}
+
+.k4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.k4-b{
+    width: 400px;
+    height: 350px;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+a{
+    color: rgb(240, 240, 22);
+}
+
+@media (min-width: 768px) {
+    
+    .sor{
+        display: flex;
+    }
+    
+    .d1, .d3{
+        flex: 2;
+    }
+    
+    .d2, .d4{
+        flex: 3;
+    }
+
+    .k2{
+        display: flex;
+        flex-direction: row;
+        height: 620px;
+        justify-content: space-around;
+    }
+
+    .k2-b{
+        max-width: 300px;
+        max-height: 350px;
+        overflow-y: auto;
+    }   
+
+    .k2-b:nth-child(1){
+        align-self: center;
+    }
+
+    .k2-b:nth-child(2){
+        align-self: flex-start;
+    }
+
+    .k2-b:nth-child(3){
+        align-self: flex-end;
+    }
+
+    .k2-b:nth-child(4){
+        align-self: center;
+    }
+}

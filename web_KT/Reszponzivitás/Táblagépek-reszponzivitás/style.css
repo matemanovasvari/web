@@ -1,0 +1,216 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(241,233,201);
+    color: black;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header{
+    height: 500px;
+    background-color: rgb(148,143,122);
+    padding: 50px 0;
+}
+
+header #hkep1{
+    height: 250px;
+    transform: rotate3d(1, -1, 1, 20deg);
+    position: relative;
+    left: 50px;
+    z-index: 2;
+    opacity: 0.75;  /*25%-os átlátszóság*/
+}
+
+header #hkep2{
+    height: 400px;
+    transform: rotate3d(1, -1, -1, 20deg);
+    z-index: 0;
+}
+
+header div{
+    text-align: center;
+    width: 100vw;
+}
+
+header p{
+    font-size: 60px;
+    text-transform: uppercase;
+    background-color: white;
+    width: 50vw;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 6px 6px rgb(177, 172, 152);
+    transition: width 4s;
+}
+
+header p:hover{
+    width: 100vw;
+    text-align: center;
+}
+
+table{
+    width: 80vw;
+    background-color: rgb(88, 86, 74);
+    color: rgb(241, 233, 201);
+    margin: 30px auto;
+    border: 5px solid rgb(148, 143, 122);
+}
+
+th, td{
+    border: 2px solid rgb(148, 143, 122);
+    border-spacing: 2px;
+}
+
+th{
+    height: 40px;
+    font-size: 20px;
+    font-variant: small-caps;
+    vertical-align: middle;
+}
+
+td{
+    text-align: center;
+}
+
+.termeknev{
+    text-align: left;
+}
+
+tbody tr:nth-child(odd){   /*páratlan sorok háttere*/
+    background-color: rgb(148, 143, 122);
+}
+
+tbody tr:hover{
+    color: red;
+}
+
+caption{
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    background-color: rgb(148, 143, 122);
+    padding: 20px 0;
+    margin-bottom: 5px;
+}
+
+#kartyak{
+    width: 90vw;
+    margin: 0 auto;
+}
+
+section{
+    width: 27vw;
+    margin: 10px 1vw;
+    border: 5px solid rgb(148, 143, 122);
+    outline: 3px solid rgb(88, 86, 74);
+    /* outline-offset: 2px; */     /*ez a beállítás a külső és a normál szegély közötti távolságra vonatkozik*/
+    box-shadow: 5px 5px rgb(88, 86, 74);
+    background: -moz-linear-gradient(top, rgb(196, 185, 145) , rgb(255, 255, 255) );
+    background: -webkit-gradient(linear, right top, left bottom, from(rgb(196, 185, 145)), to(rgb(255, 255, 255)));
+    text-align: center;
+    float: left;
+}
+
+section p{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 1px 1px rgb(88, 86, 74);
+}
+
+section ul{
+    text-align: left;
+}
+
+section img{
+    width: 60%;
+}
+
+footer{
+    clear: both;
+}
+
+footer > p{
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0;
+}
+
+a{
+    color:  rgb(88, 86, 74);
+    font-size: 25px;
+}
+
+
+
+/*kis méretű kijelzőn*/
+@media screen and (max-width: 600px) {
+    header{
+        height: 150px;
+    }
+
+    header #hkep1{
+        height: 75px;
+    }
+
+    header #hkep2{
+        height: 120px;  
+    }
+
+    header p{
+        font-size: 18px;
+    }
+
+    #kartyak{
+        width: 95vw;
+        margin: 0;
+    }
+
+    section{
+        width: 95vw;
+        clear: left;
+    }
+
+    section h2{
+        font-size: 1.1rem;
+    }
+
+    #tablakontener{
+        width: 95vw;
+        overflow-x: auto;
+    }
+}
+
+/*közepes méretű kijelzőn*/
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    header{
+        height: 300px;
+    }
+
+    header #hkep1{
+        height: 150px;
+    }
+
+    header #hkep2{
+        height: 240px;  
+    }
+
+    header p{
+        font-size: 30px;
+    }
+
+    #kartyak{
+        margin: 0;
+        width: 100vw;
+    }
+
+    section{
+        width: 45vw;
+    }
+
+    section h2{
+        font-size: 1.1rem;
+    }
+    
+}

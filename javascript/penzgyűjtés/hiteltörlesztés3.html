@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiteltörlesztés</title>
+    <style>
+        table, th, td { border: 1px solid black; }
+        table { width: 80%; margin: 15px auto; table-layout: fixed;
+        border-collapse: collapse;}
+        td { text-align: center;}
+    </style>
+</head>
+
+<body>
+    <h1>Hiteltörlesztés</h1>
+    <p>Feladatleírás: Bekérjük a felhasználótól hitel összegét, a havi visszafizetés összegét, az éves kamatláb nagyságát. Táblázatban írassuk ki minden egyes hónapban, hogy mennyi hitelünk van a hónap elején, mennyi pénzt fizettünk be, mennyi kamatot számol fel a bank a hónapban és hogy a hónap végén mennyi hitelünk maradt! A tábla kiírása akkor fejeződjön be, ha hitel visszafizetésre került.</p>
+
+    <div>
+        <label for="hitel">Hitel összege: </label>
+        <input type="number" min="100000" value="1000000" id="hitel"> Ft
+    </div>
+
+    <div>
+        <label for="reszlet">Havi visszafizetés összege (részlet): </label>
+        <input type="number" min="1000" value="15000" id="reszlet"> Ft
+    </div>
+
+    <div>
+        <label for="kamatlab">Éves kamatláb nagysága: </label>
+        <input type="text" value="3" id="kamatlab"> %
+    </div>
+
+    <div id="radiobuttons">
+        <p>Milyen időszakonként kíván fizetni?</p>
+        <input type="radio" id="nap" name="r" value="365"></input>
+        <label for="nap">napi</label><br>
+
+        <input type="radio" id="heti" name="r" value="52"></input>
+        <label for="heti">heti</label><br>
+
+        <input type="radio" id="ho" name="r" value="12" checked></input>
+        <label for="ho">havi</label><br>
+
+        <input type="radio" id="ho2" name="r" value="6"></input>
+        <label for="ho2">kéthavi</label><br>
+
+        <input type="radio" id="negyed" name="r" value="4"></input>
+        <label for="negyed">negyedéves</label><br>
+    </div>
+
+    <button onclick="kalkulal();">Kalkuláció elkészítése</button>
+
+    <div id="eredmeny"></div>
+
+    <script>
+        function kalkulal() {
+            let h = parseInt(document.getElementById("hitel").value);
+            let r = parseInt(document.getElementById("reszlet").value);
+            let kl = parseFloat(document.getElementById("kamatlab").value);
+            
+            let buttons = document.getElementsByName("r");
+            let valasz;
+
+            for(j in buttons){
+                if(buttons[j].checked){
+                    valasz = buttons[j].value;
+                }
+            }
+            
+            
+            let ki = "<table><tr>";
+            ki += "<th>Időszak<br>sorszáma</th>";
+            ki += "<th>Időszak eleji<br>tartozás<br>összege</th>";
+            ki += "<th>Törlesztett<br>összeg</th>";
+            ki += "<th>Időszaki kamat<br>összege</th>";
+            ki += "<th>Időszak végi<br>tartozás<br>összege</th>";
+            ki += "</tr>";
+
+            let hoeleji = h, hovegi, kamat;
+            let i=1;
+            do {
+                kamat = Math.round((hoeleji-r)*kl/100/valasz);
+                hovegi = hoeleji - r + kamat;
+                ki += "<tr>";
+                ki += "<td>" +i+ ". hónap</td>";
+                ki += "<td>" +hoeleji+ " Ft</td>"; 
+                if (hoeleji<=r) {
+                    r = hoeleji;
+                    kamat = 0;
+                    hovegi = 0;
+                }
+                ki += "<td>" +r+ " Ft</td>"; 
+                ki += "<td>" +kamat+ " Ft</td>"; 
+                ki += "<td>" +hovegi+ " Ft</td>"; 
+                ki += "</tr>";
+                hoeleji = hovegi;
+                i++;
+            } while (hovegi>0);
+
+
+            ki += "</table>";
+
+            ki += "<p>A hitel visszafizetéséhez "+(i-1)+" időszakra van szükség.</p>";
+
+            document.getElementById("eredmeny").innerHTML = ki;
+        }
+
+    </script>
+
+</body>
+
+</html>

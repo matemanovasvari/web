@@ -1,0 +1,43 @@
+body {
+    background: #f8f9fa;
+}
+.card img {
+    object-fit: cover;
+    height: 200px;
+}
+.card-body {
+    text-align: center;
+}
+.card-title {
+    margin-bottom: 10px;
+}
+.btn-custom {
+    background-color: #3f87a6;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#back{
+    position: absolute;
+    top: 15;
+    right: 15;
+    float: right;
+    background-color: #3f87a6;
+    border: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}

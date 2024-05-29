@@ -1,0 +1,14 @@
+Szorgalmi feladatok:
+idozitett_kerdes+valasz.html: tegyünk fel néhány kérdést (pl. ötöt) és mérjük a válaszadás teljes idejét, illetve csak akkor jelenjen meg a következő kérdés, ha a megelőző kérdésre jól válaszolt a kitöltő - a kérdések választípusai legyenek változatosak (szót, számot, hosszabb kifejezést kelljen megadni vagy esetleg megadott válaszlehetőségek közül kelljen választani)
+
+---
+novekvo_sav.html: jelöljünk ki egy területet a képernyőn és annak egy részét dinamikusan növekvő módon színezzük be (pl. másodpercenként 10%-kal növekedjen a beszínezett rész - közben egy tetszőleges szöveg legyen látható: pl. "Türelmét kérem, a betöltés folyamatban van"); ha a teljes felület beszínezésre került, jelenjen meg egy ezzel kapcsolatos üzenet, illetve az oldal addig elrejtett tartalma (legalább néhány címsorral, szöveg- és képtartalommal)
+---
+
+---
+szin-kep-csere.html: előre meghatározott időközönként (pl. 5 másodpercenként) cseréljük le egy oldalon az alkalmazott háttérszínt és (a vele összhangban lévő, olvasható) betűszínt, valamint az oldalon elhelyezett képek közül legalább kettőt változtassuk meg
+---
+
+---
+tartalomcsere.html: egy választott témában kapcsolatban készítsünk rövid ismertetőket (pl. címet, 2-3 rövid bekezdést és legalább egy képet, valamint egy külső oldalra mutató linket tartalmazzon egy-egy ismertető és legalább legyen belőle 6 ilyen blokk) - időközönként (pl. 10 másodpercenként) VÉLETLENSZERŰEN jelenítsük meg az egyik ismertetőt úgy, hogy közben a többi ismertető ne legyen látható
+---

@@ -1,0 +1,35 @@
+#szinpad{
+    position: relative;
+    margin: 0 auto;
+    width: 964px;
+    height: 495px;
+}
+
+#fuggony-bal{
+    position: absolute;
+    top: 120px;
+    left: 240px;
+    width: 253px;
+    height: 318px;
+    transition: all 3s;
+}
+
+#fuggony-jobb{
+    position: absolute;
+    width: 253px;
+    height: 318px;
+    top: 120px;
+    right: 240px;
+    transition: all 3s;
+}
+
+h1{
+    text-align: center;
+}
+
+#szinpad:hover>#fuggony-bal{
+    width: 0;
+}
+#szinpad:hover>#fuggony-jobb{
+    width: 0;
+}

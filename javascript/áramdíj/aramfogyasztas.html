@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="aramfogy-feldolgoz.js"></script>
+    <title>Áramfogyasztás</title>
+</head>
+<body>
+
+<h1>Áramfogyasztás fizetendő összegének meghatározása</h1> 
+
+<div id="inputs">
+    <p>Fogyasztás nagysága: <input type="text" id="sizeofconsumption"> kWh</p>
+    <p>Alapdíj összege: <input type="text" id="baseprice"> Ft</p>
+    <p>Határérték: <input type="text" id="pricelimit"> kWh</p>
+    <p>Határérték feletti ár: <input type="text" id="priceabovelimit"></p>
+    <p>Határérték alatti ár: <input type="text" id="pricebelowlimit"></p>
+    <p>Nagycsaládos kedvezmény:<input type="text" id="bigfamilydiscount"> (van:1/nincs:0)</p>
+    <p>Rendkívüli kedvezmény nagysága: <input type="text" id="sizeofextraordinarydiscount"> % (ha nincs írjon 0 százalékot)</p>
+</div>
+
+<div id="outputs">
+    ==========================================================
+    <p>A fogyasztás alapján fizetendő összeg: <span id="consumptionbasedprice"></span> Ft</p>
+    <p>A nagycsaládos kedvezménnyel csökkentett fizetendő összeg: <span id="pricewithbfd"></span> Ft</p>
+    <p>Az alapdíjjal növelt összeg: <span id="pricewithbaseprice"></span> Ft</p>
+    <p>A rendkívüli kedvezmény összege: <span id="pricewithextraordinarydiscount"></span> Ft</p>
+    <p>A fogyasztó által fizetendő összeg: <span id="pricetopay"></span> Ft</p>
+</div>
+
+<button id="start_btn" onclick="start()">START</button>
+<button id="restart_btn" onclick="restart()">RESTART</button>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+Férfi vízilabda összesített éremtáblázat, olimpiák
+Országok 	Arany 	Ezüst 	Bronz
+1. Magyarország 	8 	3 	3
+2. Nagy-Britannia 	4 	0 	0
+3. Jugoszlávia 		3 	4 	1
+4. Olaszország 		3 	1 	2
+5. Szovjetunió 		2 	2 	3

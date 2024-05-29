@@ -1,0 +1,48 @@
+table, tr{
+    border: 3px solid grey;
+    border-collapse: collapse;
+}
+
+th, td{
+    width: 60px;
+    text-align: right;
+}
+
+tr{
+    height: 40px;
+}
+
+tfoot td{
+    text-align: left;
+}
+
+tbody td:first-child{
+    width: 200px;
+    text-align: left;
+}
+
+tbody td:last-child{
+    color: red;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd){
+    background-color: lightcyan;
+}
+
+tbody tr:nth-child(odd):hover{
+    color: red;
+    font-weight: bold;
+}
+
+tfoot td{
+    font-size: 14px;
+}
+
+caption{
+    font-size: 20px;
+    color: red;
+    text-shadow: 1px 1px gray;
+    margin: 15px 0;
+    caption-side: bottom;
+}

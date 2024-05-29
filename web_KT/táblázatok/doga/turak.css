@@ -1,0 +1,47 @@
+caption{
+    background-image: url(fu.jpg);
+    border-radius: 40px 10px 40px 10px;
+    color: rgb(15, 74, 15);
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+caption>tr,td, th{
+    border: 2px solid darkgreen;
+    border-spacing: 5px;
+}
+
+thead>tr:nth-child(1){
+    background-image: url(fu.jpg);
+}
+
+thead>tr>th{
+    width: 100px;
+}
+
+thead>tr>th:first-child{
+    width: 200px;
+    text-align: left;
+}
+
+thead>tr>th:last-child{
+    width: 200px;
+}
+
+tbody>tr>th:first-child{
+    background-color: darkgreen;
+    color: white;
+    text-align: left;
+    line-height: 50px;
+}   
+
+tbody{
+    text-align: center;
+}
+
+tbody>tr:hover{
+    background-color: darkgreen;
+    color: white;
+}

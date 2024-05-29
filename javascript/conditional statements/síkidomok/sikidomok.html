@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Síkidomok</title>
+</head>
+
+<body>
+    <h1>Síkidomok</h1> 
+    
+    <p>A sík feldarabolásával síkidomokat kapunk. Ezek között lehet olyan, amelyik a végtelenbe nyúlik és olyan is, amelyik nem. Ha egy síkidom nem nyúlik a végtelenbe, akkor korlátosnak nevezzük, mert ezek köré rajzolható olyan kör, amely tartalmazza a síkidomot.</p>
+
+    <p>A korlátos síkidomokat több vonal is határolhatja. Ezt a vonalat az esetek többségében úgy adjuk meg, hogy az önmagát nem metsző és zárt vonal legyen.</p>
+
+    <p>Válassz egy síkidomot és máris olvashatod annak legfontosabb tulajdonságait!</p>
+    <ul>
+        <li>N, n - négyzet</li>
+        <li>T, t - téglalap</li>
+        <li>R, r - rombusz</li>
+        <li>P, p - paralelogramma</li>
+        <li>D, d - deltoid</li>
+        <li>Z, z - trapéz</li>
+        <li>K, k - kör</li>
+        <li>S, s - sokszögek</li>
+    </ul>
+
+    <div>
+        <label for="valasz">Ide írd be a választott síkidom betűjelét! </label>
+        <input type="text" size="2" id="valasz">
+        <button onclick="mutasd();" id="start">Mutasd a tulajdonságokat!</button>
+    </div>
+
+    <div id="eredmeny"></div>
+
+    
+    <div id="negyzet">
+        <h2>Négyzet</h2>
+        <p>Definíció: a négyzet olyan négyszög, amelynek oldalai és szögei egyenlők.</p>
+        <p>Tulajdonságai:</p>
+        <ul>
+            <li>minden oldala egyenlő és szemközti oldalai párhuzamosak</li>
+            <li>minden szöge 90 fokos</li>
+            <li>átlói egyenlő hosszúak és felezik egymást, valamint merőlegesek egymásra</li>
+            <li>tengelyesen (4 tengely) és középpontosan is szimmetrikus alakzat</li>
+            <li>kerülete = 4*a ("a" jelöli az oldalhosszúságot)</li>
+            <li>területe = a*a</li>
+        </ul>
+    </div>
+
+    <div id="teglalap">
+        <h2>Téglalap</h2>
+        <p>Definíció: a téglalap olyan négyszög, amelynek minden szöge egyenlő.</p>
+        <p>Tulajdonságai:</p>
+        <ul>
+            <li>szemközti oldalai egyenlő hosszúak és párhuzamosak egymással</li>
+            <li>minden szöge egyenlő (90 fokosak)</li>
+            <li>átlói egyforma hosszúak és felezik egymást</li>
+            <li>tengelyesen (2 tengely) és középpontosan is szimmetrikus alakzat</li>
+            <li>kerülete = 2*(a+b) ("a" és "b" jelöli az oldalhosszúságokat)</li>
+            <li>területe = a*b</li>
+        </ul>
+    </div>
+
+    <div id="rombusz">
+        <h2>Rombusz</h2>
+        <p>Definíció: a rombusz olyan négyszög, amelynek minden oldala egyenlő.</p>
+        <p>Tulajdonságai:</p>
+        <ul>
+            <li>szemközti oldalai egyenlő hosszúak és párhuzamosak egymással</li>
+            <li>szemközti szögei egyenlők, a száron fekvő szögek összege 180 fok</li>
+            <li>átlói merőlegesen felezik egymást</li>
+            <li>tengelyesen (2 tengely) és középpontosan is szimmetrikus alakzat</li>
+            <li>kerülete = 4*a ("a" jelöli az oldalhosszúságot)</li>
+            <li>területe = a*m<sub>a</sub> = (e*f)/2 ("e" és "f" jelöli a két átló hosszúságát)</li>
+        </ul>
+    </div>
+
+    <div id="paralelogramma">
+        <h2>Paralelogramma</h2>
+        <p>Definíció: a paralelogramma olyan négyszög, amelynek két párhuzamos oldalpárja van.</p>
+        <p>Tulajdonságai:</p>
+        <ul>
+            <li>szemközti oldalai egyenlők</li>
+            <li>szemközti szögei egyenlők, a száron fekvő szögek összege 180 fok</li>
+            <li>átlói felezik egymást</li>
+            <li>középpontosan szimmetrikus</li>
+            <li>kerülete = 2*(a+b) ("a" és "b" jelöli az oldalhosszúságokat)</li>
+            <li>területe = a*m<sub>a</sub> = b*m<sub>b</sub></li>
+        </ul>
+    </div>
+
+    <div id="deltoid">
+        <h2>Deltoid</h2>
+        <p>Definíció: a deltoid olyan négyszög, amelynek két-két szomszédos oldala egyenlő.</p>
+        <p>Tulajdonságai:</p>
+        <ul>
+            <li>két-két szomszédos oldala egyenlő nagyságú</li>
+            <li>egyik szemközti szögpárja azonos nagyságú</li>
+            <li>átlói merőlegesek egymásra és a szimmetriaátló felezi a másik átlót</li>
+            <li>tengelyesen (1 tengely) szimmetrikus</li>
+            <li>kerülete = 2*(a+b) ("a" és "b" jelöli az oldalhosszúságokat)</li>
+            <li>területe = (e*f)/2 ("e" és "f" jelöli a két átló hosszúságát)</li>
+        </ul>
+    </div>
+
+    <div id="trapez">
+        <h2>Trapéz</h2>
+        <p>Definíció: a trapéz olyan négyszög, amelynek van párhuzamos oldalpárja.</p>
+        <p>Tulajdonságai:</p>
+        <ul>
+            <li>az alapok párhuzamosak egymással</li>
+            <li>a száron fekvő szögek összege 180 fok</li>
+            <li>kerülete = a+b+c+d (az "a" és "c" a párhuzamos oldalak hosszát jelöli)</li>
+            <li>területe = (a+c)/2*m ("m" az "a" és a "c" oldalak távolságát jelöli)</li>
+        </ul>
+    </div>
+
+    <div id="kor">
+        <h2>Kör</h2>
+        <p>Definíció: a kör alatt a geometriai sík tér azon pontjainak halmazát értjük, amely pontok a sík egy meghatározott pontjától (középpont) adott (sugárnyi) távolságra helyezkednek el.</p>
+        <ul>
+            <li>kerülete = 2*r*Pi ("r" a kör sugarát jelöli)</li>
+            <li>területe = r*r*Pi</li>
+        </ul>
+    </div>
+
+    <div id="sokszog">
+        <h2>Sokszögek</h2>
+        <p>Definíció: sokszögnek (idegen szóval: poligonnak) nevezzük azokat a síkidomokat, melyeket véges sok, egymáshoz csatlakozó egyenes szakasz alkotta zárt görbe (azaz zárt töröttvonal) határol. </p>
+        <ul>
+            <li>kerülete = az oldalak hosszának összege</li>
+            <li>területe = "n" oldal esetén n-2 db háromszögre bontjuk fel és az egyes háromszögek területeinek összegeként számítjuk ki</li>
+        </ul>
+     </div>
+     
+</body>
+<script src="index.js"></script>
+</html>

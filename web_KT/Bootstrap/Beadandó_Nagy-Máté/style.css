@@ -1,0 +1,28 @@
+.navbar-brand{
+    padding-right: 13px;
+    border-right: 2px solid rgba(0, 0, 1, 0.1);
+}
+
+body{
+    background: linear-gradient(0.25turn, rgba(63, 135, 166, 0.9), rgba(235, 248, 225, 0.9), rgba(246, 157, 60, 0.9));
+}
+
+nav{
+    border-bottom: 2px solid rgba(0, 0, 1, 0.1);
+
+}
+
+.dropdown-menu{
+    background-color: rgba(188, 184, 184, 0.8);
+    border: none;
+    text-shadow: none;
+}
+
+#szolgaltatasok{
+    margin: 20px;
+    text-align: center;
+}
+
+#kondi{
+    height: 426px
+}

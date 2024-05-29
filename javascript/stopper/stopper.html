@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stopper.css">
+    <title>Stopper</title>
+</head>
+<body>
+    <button onclick="Start()" id="startbtn">Start</button>
+    <button onclick="Stop()" id="stopbtn">Stop</button>
+
+    <div id="popup">
+        <p id="message">Time's up!</p>
+        <button id="okbtn" onclick="Close()">OK</button>
+    </div>
+    <div id="countdown"></div>
+    <script src="stopper.js"></script>
+    <button onclick="Restart()" id="restartbtn">Restart</button>
+</body>
+</html>

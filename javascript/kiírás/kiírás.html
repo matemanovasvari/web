@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számolás-kiírás</title>
+    <script>
+        function szamol() {
+            var numberOfBoys = parseInt(document.getElementById("boys").value);
+            var numberOfGirls = parseInt(document.getElementById("girls").value);
+            var numberOfGirlsAndBoys = numberOfBoys + numberOfGirls;
+            var fa = Math.round(numberOfBoys/numberOfGirlsAndBoys*100);
+            var la = 100-fa
+
+            var osszhely = document.getElementById("ossz");
+            
+            osszhely.innerHTML = "Az osztály létszáma: "+numberOfGirlsAndBoys+"fő.";
+            osszhely.style.color = "green";
+            osszhely.style.fontWeight = "bold";
+            osszhely.style.marginTop = "20px";
+
+            var ah = document.getElementById("arany");
+            ah.innerHTML = "A fiúk aránya"+fa+"%<br>A lányok aránya"+la+"%";
+            ah.style.backgroundColor = "yellow";
+            ah.style.fontStyle = "italic";
+            ah.style.width = "50%";
+        }
+    </script>
+</head>
+<body>
+    <h1>Számolás - kiírás</h1>
+
+    <!--
+        input - adatbekérés
+        getElementById = id alapján
+        parseInt = egész számmá alakítás
+        parseFloat = lebegőpontos számmá alakítás
+        innerHTML = weboldalra kiírás
+        console.log = konzolra való kiírás
+    -->
+
+    <p>
+        <label for="boys">Fiúk száma:</label>
+        <input type="text" id="boys">
+    </p>
+
+    <p>
+        <label for="girls">Lányok száma:</label>
+        <input type="text" id="girls">
+    </p>
+
+    <button onclick="szamol();">Számolás indul</button>
+
+    <div id="ossz"></div>
+    <div id="arany"></div>
+</body>
+</html>

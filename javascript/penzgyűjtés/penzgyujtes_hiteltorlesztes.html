@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pénzgyűjtés célértékkel</title>
+    <style>
+        table, th, td { border: 1px solid black; }
+        table { width: 80%; margin: 15px auto; table-layout: fixed;
+        border-collapse: collapse;}
+        td { text-align: center;}
+    </style>
+</head>
+
+<body>
+    <h1>Pénzgyűjtés célértékkel</h1>
+    <p>Feladatleírás: Bekérjük a felhasználótól az induló összeget (tőke), a havi befizetés összegét, az éves kamatláb nagyságát és az elérendő célösszeget. Táblázatban írassuk ki minden egyes hónapban, hogy mennyi pénzünk van a hónap elején, mennyi pénzt fizettünk be, mennyi kamatot kaptunk a hónapban és hogy a hónap végén mennyi pénzünk lesz! A tábla kiírása akkor fejeződjön be, ha elértük a kívánt összeget.</p>
+
+    <div>
+        <label for="hitel">Induló összeg (tőke): </label>
+        <input type="number" min="100000" value="1000000" id="hitel"> Ft
+    </div>
+
+    <div>
+        <label for="reszlet">Havi befizetés összege (részlet): </label>
+        <input type="number" min="1000" value="15000" id="reszlet"> Ft
+    </div>
+
+    <div>
+        <label for="kamatlab">Éves kamatláb nagysága: </label>
+        <input type="number" value="3" id="kamatlab"> %
+    </div>
+
+
+    <button onclick="kalkulal();">Kalkuláció elkészítése</button>
+
+    <div id="eredmeny"></div>
+
+    <script>
+        function kalkulal() {
+            let hitel = parseInt(document.getElementById("hitel").value);
+            let reszlet = parseInt(document.getElementById("reszlet").value);
+            let kamatlab = parseFloat(document.getElementById("kamatlab").value);
+
+            
+            let ki = "<table><tr>";
+            ki += "<th>Hónap<br>sorszáma</th>";
+            ki += "<th>Hó eleji<br>összege</th>";
+            ki += "<th>Törlesztett<br>összeg</th>";
+            ki += "<th>Havi kamat<br>összege</th>";
+            ki += "<th>Hóvégi<br>tartozás<br>összeg</th>";
+            ki += "</tr>";
+
+            let hoeleji = hitel, hovegi, kamat;
+            let i=1;
+            do {
+                kamat = Math.round((hoeleji - reszlet) * kamatlab / 100 / 12);
+                hovegi = hoeleji - reszlet + kamat;
+                ki += "<tr>";
+                ki += "<td>" +i+ ". hónap</td>";
+                ki += `<td> ${hoeleji} Ft</td>`;
+                if(hoeleji <= reszlet){
+                    reszlet = hoeleji;
+                    kamat = "0";
+                    hovegi = "0";
+                }
+                ki += "<td>" +reszlet+ " Ft</td>"; 
+                ki += "<td>" +kamat+ " Ft</td>"; 
+                ki += "<td>" +hovegi+ " Ft</td>"; 
+                ki += "</tr>";
+                hoeleji = hovegi;
+                i++;
+            } while (hovegi > 0);
+
+
+            ki += "</table>";
+
+            ki += "<p>A hitel visszafizetéséhez "+(i-1)+" hónapra van szükség.</p>";
+
+            // ha a szöveget a tábla elé akarjuk tenni:
+            // ki = "....." + ki;
+
+            document.getElementById("eredmeny").innerHTML = ki;
+        }
+
+    </script>
+
+</body>
+
+</html>

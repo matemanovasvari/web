@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Áramdíj számítás</title>
+</head>
+<body>
+<div>
+    <p>Áramfogyasztás fizetendő összegének meghatározása</p>
+    <p>A fogyasztási időszak: <input type="text"> (kezdő dátum) – <input type="text"> (záró dátum)</p>
+    <p>Fogyasztás nagysága: <input type="text"> kWh</p>
+    <p>Fogyasztás árának határértéke: <input type="text"> kWh</p>
+    <p>Határérték alatti ár: <input type="text"> Ft</p>
+    <p>Határérték feltetti ár: <input type="text"> Ft</p>
+    <p>Alapdíj összege: <input type="text"> Ft</p>
+    <p>Nagycsaládos kedvezmény: <input type="text"> van / nincs (a megfelelő szöveg jelenjen meg)</p>
+    <p>Rendkívüli kedvezmény nagysága: <input type="text">%</p>
+
+    <div id="output">
+        <p>==========================================================</p>
+        <p>A fogyasztás alapján fizetendő összeg: <span></span>Ft</p>
+        <p>A nagycsaládos kedvezménnyel csökkentett fizetendő összeg: <span></span>Ft</p>
+        <p>Az alapdíjjal növelt összeg: <span></span>Ft</p>
+        <p>A rendkívüli kedvezmény összege: <span></span>Ft</p>
+        <p>A fogyasztó által fizetendő összeg: <span></span>Ft</p>
+    </div>
+
+    <label for="startButton"></label>
+    <button id="startButton" onclick="start()">Start</button>
+</div>
+</body>
+</html>

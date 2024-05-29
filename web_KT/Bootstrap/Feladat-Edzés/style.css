@@ -1,0 +1,9 @@
+.jumbotron{
+    background-image: url(forras/edzes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35vh;
+}
+
+.jumbotron>p{
+}

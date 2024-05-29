@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="vizsga-feldolgoz.js"></script>
+    <title>Vizsga</title>
+</head>
+<body>
+<div class="wrapper">
+    <div id="inputs">
+        <p id="title">A vizsga összköltségének és 1 főre jutó összegének meghatározása:</p>
+        <p>A vizsgázók létszáma: <input type="text" id="numberofcandidates"> fő</p>
+        <p>A vizsga hossza: <input type="text" id="lenghtofexam"> perc</p>
+        <p>Bázisdíj összege: <input type="text" id="baseprice"> Ft</p>
+    </div>
+    <div id="output">
+        <p id="middleline">-------------</p>
+        <p>A vizsga összköltsége: <span id="fullpriceoutput"></span> Ft</p>
+        <p>Az 1 főre jutó vizsgaköltség: <span id="priceforone"></span> Ft/fő</p>
+    </div>
+    
+    <button onclick="start()" id="startbtn">START</button><br>
+    <button onclick="restart()" id="restartbtn">RESTART PROGRAM</button>
+</div>
+
+</body>
+</html>

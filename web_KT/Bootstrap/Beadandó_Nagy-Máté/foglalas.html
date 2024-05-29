@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="foglalas.css">
+    <title>Kékfény Szálloda - Foglalás</title>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  </head>
+<body>
+  <button id="back"><a href="index.html">Vissza a főoldalra</a></button>
+  <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h3 class="card-title">Adja meg az adatait a foglaláshoz</h3>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Név: </label>
+                  <input type="text" class="form-control" id="name" placeholder="Adja meg a nevét">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email: </label>
+                  <input type="email" class="form-control" id="email" placeholder="random@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Telefonszám: </label>
+                  <input type="tel" class="form-control" id="phone" placeholder="+36 12 345 6789">
+                </div>
+                <div class="mb-3">
+                  <label for="date" class="form-label">Dátum: </label>
+                  <input type="date" class="form-control" id="date">
+                </div>
+                <div class="mb-3">
+                  <label for="room" class="form-label">Szobaszám: </label>
+                  <input type="number" class="form-control" id="room" placeholder="Szoba száma">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Foglalás</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

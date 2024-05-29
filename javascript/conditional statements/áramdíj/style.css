@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(22, 43, 107);
+    color: white;
+}
+
+#output{
+    display: none;
+}
+
+button{
+    border-radius: 25px;
+    width: 100px;
+    height: 25px;
+    font-size: large;
+    color: white;
+    background-color: black;
+    border: none;
+}

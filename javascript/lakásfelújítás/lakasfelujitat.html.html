@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakásfelújítás</title>
+    <script>
+        function start(){
+            var widthOfRoom = parseInt(document.getElementById("widthOf").value);
+            var lenghtOfRoom = parseInt(document.getElementById("lengthOf").value);
+            var heightOfRoom = parseInt(document.getElementById("heightOf").value);
+            var numberOfDoors = parseInt(document.getElementById("doors").value);
+            var numberOfWindows = parseInt(document.getElementById("windows").value);
+
+            var sizeOfPaintedSurface = (heightOfRoom * (2 * widthOfRoom + 2 * lenghtOfRoom) + widthOfRoom * lenghtOfRoom - numberOfDoors * 90 * 200 - numberOfWindows * 100 * 100) / 10000;
+
+            var paint = document.getElementById("paint");
+            paint.innerHTML = "A festendő falfelület: "+sizeOfPaintedSurface+"m<sup>2</sup>";
+
+            var literesOfPaintToBuy = Math.ceil((sizeOfPaintedSurface * 5) / 10);
+            paint.innerHTML += " és a szükséges festékesvödör száma: "+literesOfPaintToBuy+ " vödör";
+
+            var sizeOfFloor = (widthOfRoom * lenghtOfRoom) / 10000;
+            
+            var floor = document.getElementById("floor");
+            floor.innerHTML = "A padló mérete: "+sizeOfFloor+"m<sup>2</sup>";
+
+            var boxesOfFlooring = Math.ceil(sizeOfFloor / 2.5)
+            floor.innerHTML += " és a szükséges dobozok száma: "+boxesOfFlooring+" doboz";
+
+            var priceOfFlooring = boxesOfFlooring * 2500;
+            var priceOfPaint = boxesOfFlooring * 4500;
+
+            var price = document.getElementById("price");
+            price.innerHTML = "A padló ára: "+priceOfFlooring+"Ft és a festék ára: "+priceOfPaint+"Ft";
+        }
+    </script>
+</head>
+<body>
+    <h1>Lakásfelújítás</h1>
+    <p>Exerziamus te, omnis immundus négerus, omnis satanica potestas, omnis legio, omnis infernalis incursio advesarri, omnis congregatio et secta diabolica. Vade Satana, cessa decipere humanas creaturas!</p>
+    <p>A szoba adatai</p>
+    <p>
+        <label for="widthOf">szélessége: </label>
+        <input type="text" id="widthOf" value="200"> (cm)
+    </p>
+
+    <p>
+        <label for="lengthOf">hosszúsága: </label>
+        <input type="text" id="lengthOf" value="345"> (cm)
+    </p>
+
+    <p>
+        <label for="heightOf">magassága: </label>
+        <input type="text" id="heightOf" value="260"> (cm)
+    </p>
+
+    <p>
+        <label for="doors">ajtók száma: </label>
+        <input type="text" id="doors" size="5" value="1"> (db)
+    </p>
+
+    <p>
+        <label for="windows">ablakok száma: </label>
+        <input type="text" id="windows" size="5" value="2"> (db)
+    </p>
+    
+    <button onclick="start();">Start program</button>
+
+    <div id="paint"></div>
+    <div id="floor"></div>
+    <div id="price"></div>
+    
+</body>
+</html>

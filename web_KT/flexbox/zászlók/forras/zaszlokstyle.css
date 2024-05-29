@@ -1,0 +1,154 @@
+h1{
+    text-align: center;
+}
+
+.flex-container1{
+    max-width: 95vw;
+    margin: 0 auto;
+    background-color: gray;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.flex-container1 #mo{
+  order: -2;
+}
+
+.flex-container1 #italy{
+  order: -1;
+}
+
+.flex-container1 > div{
+    height: 140px;
+    background-color: lightpink;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-container2{
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+.left{
+    background-color: gray;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.right{
+    background-color: gray;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.kozep{
+    padding: 5px;
+    margin-top: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.kozep > img{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+ }
+
+ .right > img{
+    display: block;
+    margin: 10px auto;
+ }
+
+ a{
+    color: lightgray;
+ }
+@media only screen and (min-width: 800px) {
+    .flex-container2 {
+      display: flex;
+    }
+    
+    .left, .right{
+      flex: 1;
+    }
+
+    .kozep{
+      flex: 4;
+    }
+
+    .kozep > img{
+        width: 50%;
+    }
+  }
+
+.flex-container3{
+  background-color: gray;
+  max-width: 60vw;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.sportzaszloleiras{
+  
+}
+
+
+.sportzaszlofajtak{
+  display: flex;
+  flex-direction: column;
+}
+
+.sportzaszlo1, .sportzaszlo2, .sportzaszlo3{
+  align-content: stretch;
+  flex: 1;
+}
+
+.sportzaszlo1{
+  background-color: lightpink;
+}
+
+.sportzaszlo2{
+  background-color: rgb(209, 113, 127);
+}
+
+.sportzaszlo3{
+  background-color: rgb(152, 50, 66);
+}
+
+.sportzaszlofajtak p{
+  text-align: center;
+  font-weight: bold;
+}
+
+.sportzaszlofajtak img{
+  width: 40%;
+  display: block;
+  margin: 5px auto;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .flex-container3{
+      flex-direction: row;
+      display: flex;
+    }
+
+    .sportzaszloleiras{
+      flex: 3;
+    }
+    .sportzaszloleiras p{
+      line-height: 200%;
+    }
+  
+    .sportzaszlofajtak{
+      flex: 1;
+      order: -1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+}

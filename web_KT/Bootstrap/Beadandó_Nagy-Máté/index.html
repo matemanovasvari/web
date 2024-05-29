@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kékfény Szálloda</title>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Kékfény Szálloda</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="szobak.html" target="">Szobák</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Szolgáltatások </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#szolg">Wellness</a></li>
+                            <li><a class="dropdown-item" href="#szolg">Étterem</a></li>
+                            <li><a class="dropdown-item" href="#szolg">Családi Programok</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Sport </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#tenis">Tenisz</a></li>
+                            <li><a class="dropdown-item" href="#tenis">Konditerem</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Extrák </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#extra">Saját Szauna</a></li>
+                            <li><a class="dropdown-item" href="#extra">Búvárkodás</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="foglalas.html">Foglalás</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container text-center my-5">
+
+        <h1 id="szolgaltatasok">Sport</h1>
+
+        <div class="row mb-4">
+          <div class="col">
+            <div class="card" id="tenis">
+              <img src="tenis.jpg" class="card-img-top" id="kondi">
+              <div class="card-body">
+                <h5 class="card-title">Tenisz</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="konditerem.jpg" class="card-img-top" id="kondi">
+              <div class="card-body">
+                <h5 class="card-title">Konditerem</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h1 id="szolgaltatasok szolg">Szolgáltatások</h1>
+
+        <div class="row mb-4">
+          <div class="col">
+            <div class="card" id="szolg">
+              <img src="wellness.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Wellness</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" id="szolg">
+              <img src="restaurant.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Étterem</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" id="szolg">
+              <img src="family.jpg" class="card-img-top" alt="Spa">
+              <div class="card-body">
+                <h5 class="card-title">Családi Programok</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="szolgaltatasok">Extrák</h1>
+
+        <div class="row mb-4" id="extra">
+            <div class="col">
+              <div class="card">
+                <img src="szauna.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Privát Szauna</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="buvar.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Búvárkodás</h5>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+</body>
+</html>

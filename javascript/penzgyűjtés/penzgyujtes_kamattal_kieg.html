@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pénzgyűjtés kamattal kieg</title>
+    <style>
+        table, th, td { border: 1px solid black; }
+        table { width: 80%; margin: 15px auto; table-layout: fixed;
+        border-collapse: collapse;}
+        td { text-align: center;}
+    </style>
+</head>
+
+<body>
+    <h1>Pénzgyűjtés kamattal</h1>
+    <p> <b> Feladatleírás:  </b><br>
+        Bekérjük a felhasználótól az induló összeget (tőke), a havi befizetés összegét (részlet), az éves kamatláb nagyságát (ráta) és a hónapok számát. Táblázatban írassuk ki minden egyes hónapban, hogy mennyi pénzünk van a hónap elején, mennyi pénzt fizettünk be, mennyi kamatot kaptunk a hónapban és hogy a hónap végén mennyi pénzünk lesz! Az utolsó sor után az is írjuk ki, hogy honnan indultunk (tőke), összesen mennyi pénzt fizettünk be és hová jutottunk el (végső összeg), illetve hogy a végső összeg hányszorosa a ténylegesen befizetett összegnek.</p>
+
+    <div>
+        <label for="toke">Induló összeg (tőke): </label>
+        <input type="number" min="0" value="100000" id="toke"> Ft
+    </div>
+
+    <div>
+        <label for="reszlet">Havi befizetés összege (részlet): </label>
+        <input type="number" min="1000" value="7500" id="reszlet"> Ft
+    </div>
+
+    <div>
+        <label for="ido">Hány hónapon keresztül történik a pénzgyűjtés? </label>
+        <input type="number" min="1" value="20" id="ido"> hónap
+    </div>
+
+    <div>
+        <label for="kamatlab">Éves kamatláb nagysága: </label>
+        <input type="text" value="2.5" id="kamatlab"> %
+    </div>
+
+    <button onclick="kalkulal();">Kalkuláció elkészítése</button>
+
+    <div id="eredmeny"></div>
+
+    <script>
+        function kalkulal() {
+            let t = parseInt(document.getElementById("toke").value);
+            let r = parseInt(document.getElementById("reszlet").value);
+            let h = parseInt(document.getElementById("ido").value);
+            let kl = parseFloat(document.getElementById("kamatlab").value);
+
+            
+            let ki = "<table><tr>";
+            ki += "<th>Hónap<br>sorszáma</th>";
+            ki += "<th>Hó eleji<br>összege</th>";
+            ki += "<th>Befizetett<br>összeg</th>";
+            ki += "<th>Havi kamat<br>összege</th>";
+            ki += "<th>Hóvégi <br>összeg</th>";
+            ki += "</tr>";
+
+            let hoeleji = t, hovegi, kamat;
+            for (let i=1; i<=h; i++) {
+                kamat = Math.round((hoeleji+r)*kl/100/12);
+                hovegi = hoeleji + r + kamat;
+                ki += "<tr>";
+                ki += "<td>" +i+ ". hónap</td>";
+                ki += "<td>" +hoeleji+ " Ft</td>"; 
+                ki += "<td>" +r+ " Ft</td>"; 
+                ki += "<td>" +kamat+ " Ft</td>"; 
+                ki += "<td>" +hovegi+ " Ft</td>"; 
+                ki += "</tr>";
+                hoeleji = hovegi;
+            }
+            ki += "</table>";
+
+            ki += "<p>Összesítő információk:<br>";
+            ki += "- tőke összege: " + t + " Ft,<br>";
+            ki += "- összesen befizetett pénz: " + r*h + " Ft,<br>";
+            ki += "- összegyűjtött pénz összege: " + hoeleji + " Ft,<br>";
+            ki += "- a végső összeg a tőke összegének hányszorosa: " + Math.round(hoeleji/(t)*100)/100 + "-szorosa.</p>";
+
+            document.getElementById("eredmeny").innerHTML = ki;
+        }
+
+    </script>
+
+</body>
+
+</html>

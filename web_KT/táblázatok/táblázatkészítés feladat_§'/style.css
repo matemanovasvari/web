@@ -1,0 +1,22 @@
+table, th, td, tr{
+    border: 2px solid black;
+}
+
+table{
+    width: 45%;
+    background-color: rgb(185,183,182);
+
+}
+
+caption{
+    text-align: center;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    border-radius: 0px 15px;
+}
+
+th{
+    text-align: center;
+    color: #fff;
+    font-variant: small-caps;
+}

@@ -1,0 +1,17 @@
+#back{
+    position: absolute;
+    top: 15;
+    right: 15;
+    float: right;
+    background-color: #3f87a6;
+    border: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}

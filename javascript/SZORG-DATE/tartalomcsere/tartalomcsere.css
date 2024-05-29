@@ -1,0 +1,14 @@
+body{
+    overflow-x: auto;
+}
+
+#content1, #content2, #content3, #content4, #content5{
+    display: none;
+    font-size:large;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    position: absolute;
+    height: 420px;
+}
