@@ -42,13 +42,7 @@
             </div>
         </div>
 
-        <div id="third_question">
-            <div class="title">What was the name of Cooper's daughter</div>
-            <div>
-                <input type="text" id="daughter" placeholder="Type the name">
-            </div>
-        </div>
-
+        
         <div class="select-menu">
             <div class="select-btn">
                 <span class="sBtn-text">Who composed the music for Interstellar?</span>
@@ -57,23 +51,72 @@
             <ul class="options">
                 <li class="option">
                     <i class="bx bxl-github" style="color: #171515;"></i>
-                    <span class="option-text">Farmer</span>
+                    <span class="option-text">Hans Zimmer</span>
                 </li>
                 <li class="option">
                     <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
-                    <span class="option-text">Instagram Model</span>
+                    <span class="option-text">J. S. Bach</span>
                 </li>
                 <li class="option">
                     <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
-                    <span class="option-text">Nasa Test Pilot</span>
+                    <span class="option-text">Ludovico Einaudi</span>
                 </li>
                 <li class="option">
                     <i class="bx bxl-facebook-circle" style="color: #4267B2;"></i>
-                    <span class="option-text">Homeless</span>
+                    <span class="option-text">Ludvig Göransson</span>
                 </li>
             </ul>
-        </div>    
+        </div> 
+
+        <div id="forth_question">
+            <div class="title">What was the name of Cooper's daughter</div>
+            <div>
+                <input type="text" id="daughter" placeholder="Type the name">
+            </div>
+        </div>
+        
+        <div id="fifth_question">
+            <div class="title">Continue the line:</div>
+            <div>
+                <input type="text-area" id = "line" placeholder = "TARS: Cooper, that is not possible!">
+            </div>
+        </div>
+
+        <div id="sixth_question">
+            <div class="title">Select all spacecraft used in Interstellar:</div>
+            <div>
+                <div>
+                    <input type="checkbox" id="spacecraft_endurance" name="spacecraft" value="Endurance">
+                    <label for="spacecraft_endurance" id="checkbox_text">Endurance</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="spacecraft_ranger" name="spacecraft" value="Ranger">
+                    <label for="spacecraft_ranger" id="checkbox_text">Ranger</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="spacecraft_discovery" name="spacecraft" value="Discovery">
+                    <label for="spacecraft_discovery" id="checkbox_text">Discovery</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="spacecraft_lazarus" name="spacecraft" value="Lazarus">
+                    <label for="spacecraft_lazarus" id="checkbox_text">Lazarus</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="seventh_question">
+            <div class="title">How many years did they lose on the water planet?</div>
+            <div>
+                <input type="text-area" id="year" placeholder = "Type the number">
+            </div>
+        </div>
     </div>
+
+    <div id="checkBtn_container">
+        <button id="checkBtn" onclick="checkAnswers()">Check</button>
+    </div>
+
+    <div id="finalPoints"><span id="pointsGot"></span>/7</div>
 </body>
 <script src="index.js"></script>
 </html>
