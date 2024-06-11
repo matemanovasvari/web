@@ -5,8 +5,13 @@
     padding: 0;
 }
 
+body{
+    background: linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(2, 162, 194) 100%);
+}
+
 h1{
     margin-bottom: 15px;
+    color: white;
 }
 
 #container{
@@ -251,4 +256,10 @@ h1{
     top: 35%;
     left: 45%;
     transform: -50% -50%;
+}
+
+#valami{
+    background-color: white;
+    width: 100%;
+    margin: auto 25px;
 }
