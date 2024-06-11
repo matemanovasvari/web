@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Születésnap és névnap számítás</title>
+</head>
+<body>
+    <h1>Születésnap és névnap számítás</h1>
+    <div id="bekeresek">
+        <p>
+            <label for="szuldat">Kérem a születésnapja dátumát: </label>
+            <input type="date" id="szuldat" value="2024-02-22" > 
+        </p>
+        <p>
+            <label for="nevdat">Kérem a névnapja dátumát:  </label>
+            <input type="date" id="nevdat" value="2024-02-22"> 
+        </p>
+    </div>
+
+    <button class="gomb" id="feladatGomb" onclick="feladat()">Kipróbálás</button>
+    <button class="gomb" id="szamlalasGomb" onclick="szamlalas()">Start</button>
+    <button class="gomb" id="stopgomb" onclick="szamlalasStop()">Stop</button>
+
+
+    <div id="eredmenyek">
+        <p id="eltelt_e"></p>
+        <p id="kovSzulNap"></p>
+        <p id="lekerdezesIdeje"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

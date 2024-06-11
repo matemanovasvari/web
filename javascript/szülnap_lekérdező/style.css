@@ -1,0 +1,44 @@
+*{
+    color: white;
+}
+
+body{
+    background: linear-gradient( rgb(11, 1, 208), rgb(26, 26, 193), rgb(2, 162, 194));
+    background-repeat: no-repeat;
+}
+
+#szamlalasGomb, #stopgomb {
+    display: none;
+}
+
+#bekeresek{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+#eredmenyek{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.gomb{
+    border-radius: 20px;
+    background-color: rgb(63, 175, 236);
+    padding: 10px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+input{
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: black;
+}
+h1{
+    text-align: center;
+}
+
+#eltelt_e{
+    color: white;
+}
